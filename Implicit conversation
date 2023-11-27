@@ -1,71 +1,28 @@
 
-// C program to demonstrate Implicit 
-// Type Conversion of numeric types 
+// An example of implicit conversion
+#include <stdio.h>
 
-  
-#include <stdbool.h> 
-#include <stdio.h> 
+int main()
+{
 
-  
+    int x = 10; // integer x
 
-int main(void) 
-{ 
+    char y = 'a'; // character c
+ 
 
-    // Local Declarations 
+    // y implicitly converted to int. ASCII
 
-    bool b = true; 
+    // value of 'a' is 97
 
-    char c = 'X'; 
+    x = x + y;
+ 
 
-    float d = 1234.5; 
+    // x is implicitly converted to float
 
-    int i = 123; 
+    float z = x + 1.0;
+ 
 
-    short s = 98; 
+    printf("x = %d, z = %f", x, z);
 
-  
-
-    // Statements 
-
-    printf("bool + char is char:     %c\n", b + c); 
-
-    printf("int * short is int:      %d\n", i * s); 
-
-    printf("float * char is float:   %f\n", d * c); 
-
-  
-
-    // bool promoted to char 
-
-    c = c + b; 
-
-  
-
-    // char promoted to float 
-
-    d = d + c; 
-
-  
-
-    b = false; 
-
-  
-
-    // float demoted to bool 
-
-    b = -d; 
-
-  
-
-    printf("\nAfter execution \n"); 
-
-    printf("char + true:     %c\n", c); 
-
-    printf("float + char:    %f\n", d); 
-
-    printf("bool = -float:   %d\n", b); 
-
-  
-
-    return 0; 
-} 
+    return 0;
+}
